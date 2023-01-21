@@ -1,0 +1,164 @@
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #8052ec, #d161ff);
+}
+
+.text {
+    font-size: 16px;
+    text-align: center;
+    animation: animate 8s linear infinite;
+    margin-bottom: 30px;
+}
+
+.container {
+    min-width: 40%;
+    min-width: 450px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 30px 40px;
+}
+
+#newtask {
+    position: relative;
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-radius: 5px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+#newtask>input {
+    min-width: 70%;
+    height: 45px;
+    font-family: sans-serif;
+    font-size: 15px;
+    border: 2px solid #d1d3d4;
+    padding: 12px;
+    animation: animate 5s linear infinite;
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;
+}
+
+#newtask>input:focus {
+    outline: none;
+    border-color: #8052ec;
+}
+
+#newtask>button {
+    position: relative;
+    float: right;
+    min-width: 20%;
+    height: 45px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #8052ec;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    animation: animate 8s linear infinite;
+}
+
+#tasks {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    min-width: 100%;
+    position: relative;
+    animation: animate 8s linear infinite;
+}
+
+.task {
+    background-color: #ffffff;
+    height: 50px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #d1d3d4;
+    cursor: pointer;
+    animation: animate 8s linear infinite;
+}
+
+.task>span {
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.task>button {
+    background-color: #8052ec;
+    color: #ffffff;
+    height: 100%;
+    min-width: 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.info {
+    min-width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    color: rgb(0, 94, 255);
+    animation: animate 8s linear infinite;
+}
+
+@media screen and (max-width:767.9px) {
+    .container {
+        padding: 20px 30px;
+    }
+
+    #newtask {
+        min-width: var(100% - 60px);
+    }
+
+    #newtask>input {
+        min-width: var(100% -20px);
+    }
+}
+
+@keyframes animate {
+    0% {
+        color: chartreuse;
+    }
+
+    20% {
+        color: red;
+    }
+
+    40% {
+        color: aqua;
+    }
+
+    60% {
+        color: blue;
+    }
+
+    80% {
+        color: blueviolet;
+    }
+
+    100% {
+        color: lawngreen;
+    }
+}
